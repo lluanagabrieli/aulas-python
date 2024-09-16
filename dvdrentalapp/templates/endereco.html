@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+</head>
+
+<body>
+    <h1>Endereço</h1>
+    
+    <h3>Voltar para a listagem de <a href="/clientes">clientes</a></h3>
+
+    <table border="1">
+        <tr>
+            <th>Address</th>
+            <td>Address 2</td>
+            <td>District</td>
+            <td>City</td>
+            <td>Postal_code</td>
+            <td>Phone</td>
+        </tr>
+        {% for x in meuEndereco %}
+            <tr>
+                <td>{{ x.address }}</td>
+                <td>{{ x.address2 }}</td>
+                <td>{{ x.district }}</td>
+                <td>{{ x.city_id }}</td>
+                <td>{{ x.postal_code }}</td>
+                <td>{{ x.phone }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <!-- <table border="1">
+        <tr>
+            <th>inventory_id</th>
+            <th>rental_date</th>
+        </tr>
+
+        {% for x in myDetalhe %}
+            <tr>
+                <td>{{ x.inventory_id }}</td>
+                <td>{{ x.rental_date }}</td>
+            </tr>
+        {% endfor %}
+    </table> -->
+</body>
+</html>

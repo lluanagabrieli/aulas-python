@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamentos</title>
+</head>
+
+<body>
+    <h1>Pagamentos</h1>
+    
+    <h3>Voltar para a listagem de <a href="/clientes">clientes</a></h3>
+
+    <table border="1">
+        <tr>
+            <th>Payment Id</th>
+            <th>Amount</th>
+            <th>Payment Date</th>
+        </tr>
+
+        {% for x in meuPagamento %}
+            <tr>
+                <td>{{ x.payment_id }}</td>
+                <td>{{ x.amount}}</td>
+                <td>{{ x.payment_date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <!-- <table border="1">
+        <tr>
+            <th>inventory_id</th>
+            <th>rental_date</th>
+        </tr>
+
+        {% for x in myDetalhe %}
+            <tr>
+                <td>{{ x.inventory_id }}</td>
+                <td>{{ x.rental_date }}</td>
+            </tr>
+        {% endfor %}
+    </table> -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cidade</title>
+</head>
+<body>
+    <h2>Editar Cidade</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+            <label for="city">Nome da cidade:</label>
+            <input type="text" id="city" name="city" value="{{ cidade.city }}"><br>
+
+            <label for="country">País:</label>
+            <input type="text" id="country" name="country" value="{{ cidade.country }}">
+            <br><br>
+            <!-- Adicionar outros campos quando for necessário -->
+            <input type="submit" value="Salvar alterações">
+    </form>
+</body>
+</html>

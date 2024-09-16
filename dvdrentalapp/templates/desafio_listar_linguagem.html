@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Linguagens</title>
+</head>
+
+<body>
+    <h2>Listagem de Linguagens</h2>
+
+    <ul>
+        {% for linguagem in linguagens %}
+            <li>{{ linguagem.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Botão para adicionar uma nova linguagem -->
+    <a href="{% url 'desafio_adicionar' %}"><button>Adicionar nova linguagem</button></a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <h1>Todos os Clientes</h1>
+    <h3>Voltar para a <a href="/home">home</a></h3>
+    <ul>
+        {% for x in meusClientes %}
+            <li>
+                <h2>Id: {{ x.customer_id }} <br></h2>
+                <h2>Nome: <a href="/endereco/{{x.customer_id}}">{{ x.first_name }} {{ x.last_name }}</a></h2>
+                <h2><a href="/pagamentos/{{x.customer_id}}">Pagamentos ></a></h2>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

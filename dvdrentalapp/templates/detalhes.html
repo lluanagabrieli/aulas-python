@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Detalhes para {{ customer_name }}</h2>
+    
+    <p>Back to <a href="/customer">Customers</a></p>
+
+    <table border="1">
+        <tr>
+            <th>inventory_id</th>
+            <th>rental_date</th>
+        </tr>
+
+        {% for x in myDetalhe %}
+            <tr>
+                <td>{{ x.inventory_id }}</td>
+                <td>{{ x.rental_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

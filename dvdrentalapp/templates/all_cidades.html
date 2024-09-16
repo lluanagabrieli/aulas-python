@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<body>
+    <h1>Cidades</h1>
+    <ul>
+        {% for x in minhaCidade %}
+            <li>
+                <a href="/edit_cidade/{{x.city_id}}">
+                    Cidade: {{ x.city }} <br>
+                    País: {{ x.country }}
+                </a>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
